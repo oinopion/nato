@@ -1,10 +1,10 @@
 defmodule NatoWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :nato
 
-  socket "/live", Phoenix.LiveView.Socket
+  socket "/live", Phoenix.LiveView.Socket, websocket: [timeout: 45_000]
 
   socket "/socket", NatoWeb.UserSocket,
-    websocket: true,
+    websocket: [timeout: 45_000],
     longpoll: false
 
   # Serve at "/" the static files from "priv/static" directory.
