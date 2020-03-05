@@ -37,6 +37,7 @@ defmodule NatoWeb.TranscriberLive do
     {:noreply, socket}
   end
 
+  @spec assign_phrase(Socket.t(), String.t()) :: Socket.t()
   defp assign_phrase(socket, phrase) do
     code_words = Nato.Transcriber.transcribe(phrase)
     assign(socket, phrase: phrase, code_words: code_words)

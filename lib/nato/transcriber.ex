@@ -29,12 +29,14 @@ defmodule Nato.Transcriber do
     " " => " "
   }
 
+  @spec transcribe(String.t()) :: [String.t()]
   def transcribe(phrase) do
     phrase
     |> String.codepoints()
     |> Enum.map(&code_word/1)
   end
 
+  @spec code_word(String.t()) :: String.t()
   def code_word(letter) do
     upcased_letter = String.upcase(letter)
     Map.get(@code_words, upcased_letter, upcased_letter)
