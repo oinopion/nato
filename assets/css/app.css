@@ -7,3 +7,7 @@
 @tailwind utilities;
 
 /* Put your custom utilities here */
+
+.code-word::first-letter {
+    font-weight: bold;
+}

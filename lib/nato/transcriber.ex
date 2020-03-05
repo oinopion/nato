@@ -26,7 +26,7 @@ defmodule Nato.Transcriber do
     "X" => "X",
     "Y" => "Yankee",
     "Z" => "Zulu",
-    " " => "(Space)"
+    " " => " "
   }
 
   def transcribe(phrase) do

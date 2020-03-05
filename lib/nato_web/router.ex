@@ -17,8 +17,8 @@ defmodule NatoWeb.Router do
   scope "/", NatoWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
-    live "/transcribe", TranscriberLive
+    live "/", TranscriberLive
+    get "/about", PageController, :index
   end
 
   # Other scopes may use custom stacks.

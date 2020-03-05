@@ -13,15 +13,16 @@ defmodule NatoWeb.TranscriberLive do
 
   def render(assigns) do
     ~L"""
-    <h1>Transcribing...</h1>
-
     <form phx-change="transcribe">
-      <input name="phrase" value="<%= assigns.phrase %>" autocomplete="off" />
+      <input name="phrase" value="<%= assigns.phrase %>"
+        class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal text-xl"
+        placeholder="Type your phrase here..."
+        autocomplete="off" />
     </form>
 
-    <ol>
+    <ol class="py-2 px-4">
       <%= for code_word <- assigns.code_words do %>
-        <li><%= code_word %></li>
+        <li class="code-word"><%= code_word %></li>
       <% end %>
     </ol>
     """
