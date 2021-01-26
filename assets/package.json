@@ -18,7 +18,7 @@
     "css-loader": "^2.1.1",
     "mini-css-extract-plugin": "^0.4.0",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
-    "postcss-loader": "^3.0.0",
+    "postcss-loader": "^4.2.0",
     "tailwindcss": "^1.9.6",
     "terser-webpack-plugin": "^1.4.5",
     "webpack": "^4.46.0",
