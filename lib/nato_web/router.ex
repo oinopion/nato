@@ -6,6 +6,7 @@ defmodule NatoWeb.Router do
     plug :fetch_session
     plug :fetch_flash
     plug :fetch_live_flash
+    plug :put_root_layout, {NatoWeb.LayoutView, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
@@ -18,7 +19,6 @@ defmodule NatoWeb.Router do
     pipe_through :browser
 
     live "/", TranscriberLive
-    get "/about", PageController, :index
   end
 
   # Other scopes may use custom stacks.

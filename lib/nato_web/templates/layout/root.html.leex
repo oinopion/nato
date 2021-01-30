@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <%= csrf_meta_tag() %>
+    <title>Nato Phonetic Alphabet Transcriber</title>
+    <link phx-track-static rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
+    <script defer phx-track-static type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+  </head>
+  <body>
+    <header>
+    <nav class="flex items-center flex-wrap bg-purple-800 p-6">
+      <div class="flex items-center text-white mr-6">
+        <a href="/" class="font-semibold text-xl tracking-tight">Nato Phonetic Alphabet</a>
+      </div>
+
+    </header>
+    <main role="main" class="container p-6">
+       <%= @inner_content %>
+    </main>
+  </body>
+</html>

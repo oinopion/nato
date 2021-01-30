@@ -12,7 +12,7 @@ config :nato, NatoWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "d5A1jhpsUPnY/0efdX9+VN4x+9cGB3sIlWoM7ISTfNfuLwHfs+3D1jSKrsfZvtws",
   render_errors: [view: NatoWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Nato.PubSub, adapter: Phoenix.PubSub.PG2],
+  pubsub_server: Nato.PubSub,
   live_view: [signing_salt: "uqLwsMtkaXizTxpWnQMaBV7vB5Ll4W+P"]
 
 # Configures Elixir's Logger
