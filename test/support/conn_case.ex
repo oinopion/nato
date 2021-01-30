@@ -27,14 +27,4 @@ defmodule NatoWeb.ConnCase do
       @endpoint NatoWeb.Endpoint
     end
   end
-
-  setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Nato.Repo)
-
-    unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Nato.Repo, {:shared, self()})
-    end
-
-    {:ok, conn: Phoenix.ConnTest.build_conn()}
-  end
 end

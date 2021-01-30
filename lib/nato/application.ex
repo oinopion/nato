@@ -8,8 +8,6 @@ defmodule Nato.Application do
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
-      # Start the Ecto repository
-      Nato.Repo,
       # Start the endpoint when the application starts
       NatoWeb.Endpoint
       # Starts a worker by calling: Nato.Worker.start_link(arg)

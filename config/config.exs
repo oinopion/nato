@@ -7,9 +7,6 @@
 # General application configuration
 use Mix.Config
 
-config :nato,
-  ecto_repos: [Nato.Repo]
-
 # Configures the endpoint
 config :nato, NatoWeb.Endpoint,
   url: [host: "localhost"],
