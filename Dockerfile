@@ -1,7 +1,8 @@
 FROM bitwalker/alpine-elixir-phoenix:latest
 
 # Set mix env and ports
-ENV MIX_ENV=prod
+ENV MIX_ENV=prod \
+    PORT=4000
 
 # Cache Elixir deps
 ADD mix.exs mix.lock ./
